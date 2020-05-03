@@ -1,0 +1,12 @@
+dn: cn=config
+changetype: modify
+delete: olcTLSCACertificatePath
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/openldap.crt
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/openldap.key
+-
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/cacerts/my-ca.crt

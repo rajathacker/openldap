@@ -1,0 +1,35 @@
+dn: uid=testuser3,ou=People,ou=hr,dc=example,dc=com
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+sn: Iron
+cn: Iron Man
+uid: testuser3
+uidNumber: 5003
+homeDirectory: /home/testuser3
+gidNumber: 5003
+userPassword: {crypt}$1$/nSCO.YV$ImUS0Cow8PzO3Cra/AKBy1
+telephoneNumber: 666 549 7452
+description: Sample Description
+street: 6713 Jesse Hill Jr Street
+postalCode: 81670-6122
+ou: Global Learning Services
+st: AE
+l: Vacaville
+employeeNumber: 375-47-0896
+employeeType: Temp
+givenName: Iron
+homePhone: 670 046 9082
+homePostalAddress: 5102 Courtland Street $ Mount Prospect village, CT 33483-3294
+mobile: 678 301 0306
+pager: 563 315 5781
+loginShell: /bin/bash
+mail: testuser3@example.com
+
+dn: cn=testuser3,ou=Groups,ou=hr,dc=example,dc=com
+objectclass: posixGroup
+cn: testuser3
+gidNumber: 5003
+memberUid: testuser3

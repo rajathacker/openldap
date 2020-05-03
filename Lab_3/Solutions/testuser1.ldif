@@ -1,0 +1,35 @@
+dn: uid=testuser1,ou=People,ou=hr,dc=example,dc=com
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+sn: Hansson
+cn: Leslie Hansson
+uid: testuser1
+uidNumber: 5001
+homeDirectory: /home/testuser1
+gidNumber: 5001
+userPassword: PASSWORD
+telephoneNumber: 666 549 7452
+description: Sample Description
+street: 6713 Jesse Hill Jr Street
+postalCode: 81670-6122
+ou: Global Learning Services
+st: AE
+l: Vacaville
+employeeNumber: 375-47-0896
+employeeType: Temp
+givenName: Leslie
+homePhone: 670 046 9082
+homePostalAddress: 5102 Courtland Street $ Mount Prospect village, CT 33483-3294
+mobile: 678 301 0306
+pager: 563 315 5781
+loginShell: /bin/bash
+mail: testuser1@example.com
+
+dn: cn=testuser1,ou=Groups,ou=hr,dc=example,dc=com
+objectclass: posixGroup
+cn: testuser1
+gidNumber: 5001
+memberUid: testuser1

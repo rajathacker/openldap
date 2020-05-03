@@ -1,0 +1,39 @@
+dn: dc=example,dc=com
+objectclass: domain
+dc: example
+
+dn: ou=hr,dc=example,dc=com
+objectclass: organizationalUnit
+ou: hr
+
+dn: ou=People,ou=hr,dc=example,dc=com
+objectclass: organizationalUnit
+ou: People
+
+dn: ou=Groups,ou=hr,dc=example,dc=com
+objectclass: organizationalUnit
+ou: Groups
+
+dn: ou=it,dc=example,dc=com
+objectclass: organizationalUnit
+ou: it
+
+dn: ou=People,ou=it,dc=example,dc=com
+objectclass: organizationalUnit
+ou: People
+
+dn: ou=Groups,ou=it,dc=example,dc=com
+objectclass: organizationalUnit
+ou: Groups
+
+dn: ou=sales,dc=example,dc=com
+objectclass: organizationalUnit
+ou: sales
+
+dn: ou=People,ou=sales,dc=example,dc=com
+objectclass: organizationalUnit
+ou: People
+
+dn: ou=Groups,ou=sales,dc=example,dc=com
+objectclass: organizationalUnit
+ou: Groups

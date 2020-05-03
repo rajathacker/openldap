@@ -1,0 +1,35 @@
+dn: uid=testuser2,ou=People,ou=hr,dc=example,dc=com
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+sn: Monash
+cn: Ashton Monash
+uid: testuser
+uidNumber: 5002
+homeDirectory: /home/testuser2
+gidNumber: 5002
+userPassword: {crypt}$1$e6FiBvNb$WvX0.aaNPpdI/6f/mjvZG/
+telephoneNumber: 666 549 7453
+description: Sample Description
+street: 6713 Jesse Hill Sr Street
+postalCode: 81670-6123
+ou: Global Learning Services
+st: AE
+l: Vacaville
+employeeNumber: 375-47-0897
+employeeType: Full
+givenName: Ashton
+homePhone: 670 046 9083
+homePostalAddress: 5103 Courtland Street $ Mount Prospect village, CT 33483-3294
+mobile: 678 301 0307
+pager: 563 315 5782
+loginShell: /bin/bash
+mail: testuser2@example.com
+
+dn: cn=testuser2,ou=Groups,ou=hr,dc=example,dc=com
+objectclass: posixGroup
+cn: testuser2
+gidNumber: 5002
+memberUid: testuser2

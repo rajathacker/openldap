@@ -1,0 +1,7 @@
+dn: cn=config
+changetype: modify
+replace: olcLogLevel
+olcLogLevel: 256
+-
+replace: olcLogFile
+olcLogFile: /var/log/ldap_access.log

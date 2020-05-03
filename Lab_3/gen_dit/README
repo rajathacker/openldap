@@ -1,0 +1,35 @@
+#
+# gendit.py: generate sample Directory Information Tree (DIT) entries for 
+# randomly generated users with randomly assigned groups, with fairly 
+# complete (randomly generated) contact info, jpeg "face" photos, 
+# management ("org chart") heirarchies, etc.
+#
+# has been used to generate 30,000 entries for redhat-ds server.
+#
+# currently genereates the following tree.  root and ou entries are
+# generated (as needed by openldap) if -b is included.
+# 
+# (suffix)
+#	ou=People
+#		uid=(useranme)
+#		...
+#	ou=Groups
+#		cn=(primary group for username)
+#		...
+#		cn=(secondary groups w/ randomly assigned members)
+#
+# the following example would set up a sample ldap dir on station16:
+
+# generate entries
+./make_entries.py -b -s dc=station16,dc=example,dc=com -n 20 > station16.ldif
+
+(edit suffix and rootdn in slapd.conf.tmpl)
+
+# (asuming openldap-servers is freshly installed, slapd is off...)
+scp slapd.conf.tmpl station16:/etc/openldap/slapd.conf
+ssh station16 slapadd < station16.ldif
+ssh station16 chown -R ldap.ldap /var/lib/ldap
+ssh station16 service ldap start
+
+# test
+ldapsearch -h station16 -b dc=station16,dc=example,dc=com -x
