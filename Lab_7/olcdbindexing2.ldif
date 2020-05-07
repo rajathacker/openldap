@@ -1,0 +1,16 @@
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+add: olcDbIndex
+olcDbIndex: uid pres,sub,eq
+-
+add: olcDbIndex
+olcDbIndex: uidNumber eq,pres
+-
+add: olcDbIndex
+olcDbIndex: mail eq,subinitial
+-
+add: olcDbIndex
+olcDbIndex: st eq,subinitial,pres
+-
+add: olcDbIndex
+olcDbIndex: objectClass eq

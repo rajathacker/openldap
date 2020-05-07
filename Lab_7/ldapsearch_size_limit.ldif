@@ -1,0 +1,4 @@
+dn: cn=config
+changetype: modify
+add: olcSizeLimit
+olcSizeLimit: 50000
