@@ -10,7 +10,7 @@ uid: testuser2
 uidNumber: 5002
 homeDirectory: /home/testuser2
 gidNumber: 5002
-userPassword: PASSWORD
+userPassword: {crypt}PASSWORD
 telephoneNumber: 666 549 7452
 description: Sample Description
 street: 6713 Jesse Hill Jr Street
